@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Generic calc routes
  */
@@ -22,18 +24,24 @@ router.get('/add', (req, res, next) => co(function* () {
   res.json({
     result: req.query.leftOperand + req.query.rightOperand,
   });
+
+  req.app.get('calculation').storeCalculation('simple', 'add', req.query);
 }).catch(next));
 
 router.get('/subtract', (req, res, next) => co(function* () {
   res.json({
     result: req.query.leftOperand - req.query.rightOperand,
   });
+
+  req.app.get('calculation').storeCalculation('simple', 'subtract', req.query);
 }).catch(next));
 
 router.get('/multiply', (req, res, next) => co(function* () {
   res.json({
     result: req.query.leftOperand * req.query.rightOperand,
   });
+
+  req.app.get('calculation').storeCalculation('simple', 'multiply', req.query);
 }).catch(next));
 
 router.get('/divide', (req, res, next) => co(function* () {
@@ -47,6 +55,7 @@ router.get('/divide', (req, res, next) => co(function* () {
   res.json({
     result: req.query.leftOperand / rightOperand,
   });
+  req.app.get('calculation').storeCalculation('simple', 'divide', req.query);
 }).catch(next));
 
 module.exports = router;

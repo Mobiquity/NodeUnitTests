@@ -1,9 +1,18 @@
+'use strict';
+
+const co = require('co');
 const chai = require('chai');
 const expect = chai.expect;
 const request = require('supertest');
-const app = request(require('./helpers').createTestApp());
 
 describe('Calculator', () => {
+  let app;
+
+  before(done => co(function* () {
+    app = request(yield require('./helpers').createTestApp());
+    done();
+  }));
+
   describe('GET /add', () => {
     it('adds values', done => app
       .get('/simple-calc/add')

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='4'
+    datatypes='ConvertBase'
+    timedout=''
+    timedoutpods=''
+    timing='0.834'
+    parsetiming='0.3'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa11701i92bgc1iffb1963000053966925e41h4df3'
+    host='http://www5b.wolframalpha.com'
+    server='47'
+    related='http://www5b.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa11711i92bgc1iffb196300000fcfd8h700i70fe0&amp;s=47'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:0.834407'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>convert 219 to base2</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='NumberSystems'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>11011011_2</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Show exponent form'
+       input='Result__Show exponent form' />
+  </states>
+ </pod>
+ <pod title='Other base conversions'
+     scanner='NumberSystems'
+     id='OtherBaseConversions'
+     position='300'
+     error='false'
+     numsubpods='3'>
+  <subpod title=''>
+   <plaintext>3123_4</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>333_8</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>db_16</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Show exponent form'
+       input='OtherBaseConversions__Show exponent form' />
+  </states>
+ </pod>
+ <pod title='Other data types'
+     scanner='NumberSystems'
+     id='HardwareDataTypes'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext> | hexadecimal value
+unsigned 16–bit integer | db00 
+unsigned 32–bit integer | db000000 
+IEEE double–precision number | 0000000000606b40 
+(assuming little–endian byte ordering)</plaintext>
+  </subpod>
+  <states count='2'>
+   <state name='Big–endian'
+       input='HardwareDataTypes__Big–endian' />
+   <state name='More'
+       input='HardwareDataTypes__More' />
+  </states>
+ </pod>
+</queryresult>

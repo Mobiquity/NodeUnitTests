@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='12'
+    datatypes='Quantity'
+    timedout=''
+    timedoutpods=''
+    timing='2.266'
+    parsetiming='0.564'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa17821hc6cb7dc51516ih000057h73ga7023425b8'
+    host='http://www4c.wolframalpha.com'
+    server='38'
+    related='http://www4c.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa17831hc6cb7dc51516ih00003g6ch7a9f27b3338&amp;s=38'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:2.26584'>
+ <pod title='Input interpretation'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>convert 120 km  (kilometers) to meters</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Identity'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''
+      primary='true'>
+   <plaintext>120000 meters</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Additional conversions'
+     scanner='Unit'
+     id='AdditionalConversion'
+     position='300'
+     error='false'
+     numsubpods='2'>
+  <subpod title=''>
+   <plaintext>74.56 miles</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>1.2×10^7 cm  (centimeters)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Comparisons as length'
+     scanner='Unit'
+     id='ComparisonAsLength'
+     position='400'
+     error='false'
+     numsubpods='3'>
+  <subpod title=''>
+   <plaintext> ≈ (0.5 to 0.7) × length of the Annapurna Circuit (a trekking route around Mt. Annapurna in Nepal) ( 160 to 230 km )</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext> ≈ 0.78 × length of the Thirlmere Aqueduct (world&apos;s longest tunnel) (≈ 154 km )</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext> ≈ 21 × length of a single Formula One lap ( 3.2 to 26 km )</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Comparison as height'
+     scanner='Unit'
+     id='ComparisonAsHeight'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext> ≈ 2.9 × greatest height above the Earth from which a human has jumped (Alan Eustace in 2014) (≈ 135889 ft )</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Comparison as thickness'
+     scanner='Unit'
+     id='ComparisonAsThickness'
+     position='600'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext> ≈ thickness of the Earth&apos;s atmosphere (≈ 100 km )</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Comparison as distance'
+     scanner='Unit'
+     id='ComparisonAsDistance'
+     position='700'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext> ≈ 1.1 × distance corresponding to one degree of latitude on the earth&apos;s equator ( 0.002778 equatorial circumferences of Earth )</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Comparison as circumference'
+     scanner='Unit'
+     id='ComparisonAsCircumference'
+     position='800'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext> ≈ 4.4 × circumference of the Large Hadron Collider (≈ 27 km )</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Electromagnetic frequency range'
+     scanner='UnitInformation'
+     id='FrequencyBands:QuantityData'
+     position='900'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>VF/ULF  (voice frequency) </plaintext>
+  </subpod>
+ </pod>
+ <pod title='Frequency allocation for United States (ITU region 2)'
+     scanner='UnitInformation'
+     id='FrequencyAllocations:QuantityData'
+     position='1000'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>primary use | not allocated</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Interpretations'
+     scanner='Unit'
+     id='Interpretation'
+     position='1100'
+     error='false'
+     numsubpods='5'>
+  <subpod title=''>
+   <plaintext>length</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>height</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>thickness</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>distance</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>circumference</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='More'
+       input='Interpretation__More' />
+  </states>
+ </pod>
+ <pod title='Corresponding quantities'
+     scanner='Unit'
+     id='CorrespondingQuantity'
+     position='1200'
+     error='false'
+     numsubpods='5'>
+  <subpod title=''>
+   <plaintext>Light travel time t in vacuum from tx/c:
+  | 400 µs  (microseconds)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Light travel time t in an optical fiber t1.48x/c:
+  | 592 µs  (microseconds)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Distance to horizon (ignoring topography and other obstructions):
+  | 1243 km  (kilometers)
+  | 1.243×10^6 meters
+  | 772 miles</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Frequency ν of a photon in a vacuum from νc/λ:
+  | 2.5 kHz  (kilohertz)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>Frequency ν of sound at STP from νv/λ:
+  | 0.0028 Hz  (hertz)
+  | (assuming speed of sound in dry air at 15 °C and 1 atmosphere pressure ≈ 340.3 m/s)</plaintext>
+  </subpod>
+ </pod>
+ <sources count='1'>
+  <source url='http://www.wolframalpha.com/sources/CountryDataSourceInformationNotes.html'
+      text='Country data' />
+ </sources>
+</queryresult>

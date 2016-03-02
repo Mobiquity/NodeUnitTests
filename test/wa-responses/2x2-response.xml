@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='6'
+    datatypes='Math'
+    timedout=''
+    timedoutpods=''
+    timing='0.663'
+    parsetiming='0.098'
+    parsetimedout='false'
+    recalculate=''
+    id='MSPa15531i31ag324ic0c133000053ahgf983g2ai74a'
+    host='http://www5b.wolframalpha.com'
+    server='53'
+    related='http://www5b.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa15541i31ag324ic0c133000041094gca7d1780dh&amp;s=53'
+    version='2.6'
+    profile='EnterDoQuery:0.,StartWrap:0.662879'>
+ <pod title='Input'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>2×2</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Result'
+     scanner='Simplification'
+     id='Result'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>4</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='Step-by-step solution'
+       input='Result__Step-by-step solution' />
+  </states>
+ </pod>
+ <pod title='Number name'
+     scanner='Integer'
+     id='NumberName'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>four</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Visual representation'
+     scanner='Integer'
+     id='VisualRepresentation'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>   </plaintext>
+  </subpod>
+ </pod>
+ <pod title='Number line'
+     scanner='NumberLine'
+     id='NumberLine'
+     position='500'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+ <pod title='Illustration'
+     scanner='Arithmetic'
+     id='Illustration'
+     position='600'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+</queryresult>

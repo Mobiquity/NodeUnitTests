@@ -3,6 +3,7 @@
 const Promise = require('bluebird');
 const co = require('co');
 
+const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 const express = require('express');
 
@@ -28,11 +29,13 @@ if (require.main === module) {
       });
     };
 
-    const app = createApp(errorHandler);
+    const db = yield MongoClient.connect(process.env.MONGODB_DSN);
+
+    const app = createApp(db, errorHandler);
     yield startServer(app, port);
 
     console.log(`Calculator is listening on port ${port}`);
-  });
+  }).catch(err => console.error(err.stack));
 }
 
 /**
@@ -40,14 +43,18 @@ if (require.main === module) {
  * middlewares. This allows a test to specify a middleware that can skip
  * authorization, for example and mocked logging/database connections
  */
-function createApp(errorHandler) {
+function createApp(db, errorHandler) {
   const app = express();
 
   // Apply general middlewares
   app.use(bodyParser.json());
 
+  app.set('db', db);
+  app.set('calculation', require('./calculation/calculation')(app));
+
   // Apply routes
   app.use('/simple-calc', require('./simple-calc'));
+  app.use('/complex-calc', require('./complex-calc'));
 
   app.use(errorHandler);
 
