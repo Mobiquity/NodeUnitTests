@@ -4,7 +4,7 @@
   "description": "Mobiquity best practices for testing node.js servers",
   "main": "index.js",
   "scripts": {
-    "test": "MONGODB_DSN=foo WA_API_KEY=foo NODE_ENV=test node_modules/mocha/bin/_mocha test/bootstrap-tests.js test/**/*.spec.js"
+    "test": "MONGODB_DSN=foo WA_API_KEY=foo NODE_ENV=test node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -- test/bootstrap-tests.js test/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "istanbul": "^0.4.2",
     "mocha": "^2.4.5",
     "mongo-mock": "^2.0.0",
     "nock": "^7.2.2",

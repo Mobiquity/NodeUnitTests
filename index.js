@@ -15,6 +15,7 @@ const port = Number(process.env.PORT || 4000);
  * requirements. This is different from a setup for testing or other inclusion
  * of this module
  */
+/* istanbul ignore if */
 if (require.main === module) {
   co(function* () {
 
@@ -32,7 +33,7 @@ if (require.main === module) {
     const db = yield MongoClient.connect(process.env.MONGODB_DSN);
 
     const app = createApp(db, errorHandler);
-    yield startServer(app, port);
+    yield Promise.promisify(app.listen).call(app, port);
 
     console.log(`Calculator is listening on port ${port}`);
   }).catch(err => console.error(err.stack));
@@ -59,10 +60,6 @@ function createApp(db, errorHandler) {
   app.use(errorHandler);
 
   return app;
-}
-
-function startServer(app, port) {
-  return Promise.promisify(app.listen).call(app, port);
 }
 
 exports.createApp = createApp;
