@@ -76,6 +76,21 @@ describe('Complex Calculator', () => {
         .end(done)
     });
 
+    it('performs sin operation', done => {
+      const input = 'sin(2)';
+      nock('http://api.wolframalpha.com')
+        .get('/v2/query')
+        .query(Object.assign({input}, nockQueryDefaults))
+        .reply(200, () => fs.createReadStream(__dirname + '/wa-responses/sin2-response.xml'));
+
+      app
+        .get('/complex-calc/query')
+        .query({query: input})
+        .expect(200)
+        .expect(res => expect(res.body.result.substring(0,5)).to.equal('0.909'))
+        .end(done)
+    });
+
     it('indicates inability to calculate result', done => {
       const input = '!@#$%^&*()!@#$%^&*()!@#$%^&*(';
       nock('http://api.wolframalpha.com')

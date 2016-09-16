@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<queryresult success='true'
+    error='false'
+    numpods='7'
+    datatypes=''
+    timedout='Numeric,MathematicalFunctionData,Recognize'
+    timedoutpods=''
+    timing='1.307'
+    parsetiming='0.195'
+    parsetimedout='false'
+    recalculate='http://www4c.wolframalpha.com/api/v2/recalc.jsp?id=MSPa884620ig8gd7dahbi95900000i4g3fh38811hhb56420616755840095628'
+    id='MSPa884720ig8gd7dahbi95900002a7ba942eff767eg'
+    host='http://www4c.wolframalpha.com'
+    server='34'
+    related='http://www4c.wolframalpha.com/api/v2/relatedQueries.jsp?id=MSPa884820ig8gd7dahbi95900001ic8721bg6c2ihc96420616755840095628'
+    version='2.6'>
+ <pod title='Input'
+     scanner='Identity'
+     id='Input'
+     position='100'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>sin(2)</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Decimal approximation'
+     scanner='Numeric'
+     id='DecimalApproximation'
+     position='200'
+     error='false'
+     numsubpods='1'
+     primary='true'>
+  <subpod title=''>
+   <plaintext>0.909297426825681695396019865911744842702254971447890268378…</plaintext>
+  </subpod>
+  <states count='1'>
+   <state name='More digits'
+       input='DecimalApproximation__More digits' />
+  </states>
+ </pod>
+ <pod title='Property'
+     scanner='Numeric'
+     id='Property'
+     position='300'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>sin(2) is a transcendental number</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Reference triangle for angle 2 radians'
+     scanner='Numeric'
+     id='Triangle'
+     position='400'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>
+width | cos(2)≈-0.416147
+height | sin(2)≈0.909297</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Alternate forms'
+     scanner='Simplification'
+     id='AlternateForm'
+     position='500'
+     error='false'
+     numsubpods='2'>
+  <subpod title=''>
+   <plaintext>2 sin(1) cos(1)</plaintext>
+  </subpod>
+  <subpod title=''>
+   <plaintext>1/2  ^(-2 )-1/2  ^(2 )</plaintext>
+  </subpod>
+ </pod>
+ <pod title='Number line'
+     scanner='NumberLine'
+     id='NumberLine'
+     position='600'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext></plaintext>
+  </subpod>
+ </pod>
+ <pod title='Continued fraction'
+     scanner='ContinuedFraction'
+     id='ContinuedFraction'
+     position='700'
+     error='false'
+     numsubpods='1'>
+  <subpod title=''>
+   <plaintext>[0; 1, 10, 39, 1, 12, 1, 2, 1, 46, 2, 1, 2, 10, 2, 1, 54, 4, 1, 2, 1, 1, 4, 16, 1, 1, 1, 2, …]</plaintext>
+  </subpod>
+  <states count='2'>
+   <state name='More terms'
+       input='ContinuedFraction__More terms' />
+   <state name='Fraction form'
+       input='ContinuedFraction__Fraction form' />
+  </states>
+ </pod>
+ <assumptions count='1'>
+  <assumption type='AngleUnit'
+      template='Assuming trigonometric arguments in ${desc1}. Use ${desc2} instead'
+      count='2'>
+   <value name='R'
+       desc='radians'
+       input='TrigRD_R' />
+   <value name='D'
+       desc='degrees'
+       input='TrigRD_D' />
+  </assumption>
+ </assumptions>
+</queryresult>
