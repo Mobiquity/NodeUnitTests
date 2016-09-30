@@ -58,4 +58,11 @@ router.get('/divide', (req, res, next) => co(function* () {
   req.app.get('calculation').storeCalculation('simple', 'divide', req.query);
 }).catch(next));
 
+router.get('/power', (req, res, next) => co(function* () {
+  res.json({
+    result: Math.pow(req.query.leftOperand, req.query.rightOperand)
+  });
+  req.app.get('calculation').storeCalculation('simple', 'divide', req.query);
+}).catch(next));
+
 module.exports = router;

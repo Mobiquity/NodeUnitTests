@@ -69,4 +69,15 @@ describe('Calculator', () => {
       .end(done)
     );
   });
+
+  describe('GET /power', () => {
+    it('calculates powers', done => app
+      .get('/simple-calc/power')
+      .query({leftOperand: 2, rightOperand: 4})
+      .expect(200)
+      .expect(res => expect(res.body.result).to.equal(16))
+      .end(done)
+    );
+  });
+
 });
